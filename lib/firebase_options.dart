@@ -5,15 +5,6 @@ import 'package:flutter/foundation.dart'
     show defaultTargetPlatform, kIsWeb, TargetPlatform;
 
 /// Default [FirebaseOptions] for use with your Firebase apps.
-///
-/// Example:
-/// ```dart
-/// import 'firebase_options.dart';
-/// // ...
-/// await Firebase.initializeApp(
-///   options: DefaultFirebaseOptions.currentPlatform,
-/// );
-/// ```
 class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
     if (kIsWeb) {
@@ -38,10 +29,7 @@ class DefaultFirebaseOptions {
           'you can reconfigure this by running the FlutterFire CLI again.',
         );
       case TargetPlatform.linux:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for linux - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return linux;
       default:
         throw UnsupportedError(
           'DefaultFirebaseOptions are not supported for this platform.',
@@ -50,19 +38,28 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyDa4P4plZ1H1tJtdX__Fa3E01mS7WBEcG0',
-    appId: '1:902440876555:android:1f894b2e9ce00a563ce50e',
-    messagingSenderId: '902440876555',
-    projectId: 'chat-8b923',
-    storageBucket: 'chat-8b923.firebasestorage.app',
+    apiKey: 'AIzaSyDJPYs_Ypqiaxvb_5LWlYb_9CX0hLKJgQQ',
+    appId: '1:704841147760:android:1117d09e2a8fdb76541bb5',
+    messagingSenderId: '704841147760',
+    projectId: 'support-1785d',
+    storageBucket: 'support-1785d.firebasestorage.app',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyCZfZpKF64IZEEgkHsEGIEYs4xDsH-4MsE',
-    appId: '1:902440876555:ios:a0be22c72683c1ca3ce50e',
-    messagingSenderId: '902440876555',
-    projectId: 'chat-8b923',
-    storageBucket: 'chat-8b923.firebasestorage.app',
-    iosBundleId: 'com.example.lesson8moonz4',
+    apiKey: 'AIzaSyAdfOD49B91G5RjHTUPYOjMjSvu1VSNXoM',
+    appId: '1:704841147760:ios:cf0c90559fadd853541bb5',
+    messagingSenderId: '704841147760',
+    projectId: 'support-1785d',
+    storageBucket: 'support-1785d.firebasestorage.app',
+    iosClientId: '704841147760-m9f5oialklp4i9251ggq0qf631f95905.apps.googleusercontent.com',
+    iosBundleId: 'com.example.ilovam',
+  );
+
+  static const FirebaseOptions linux = FirebaseOptions(
+    apiKey: 'AIzaSyDJPYs_Ypqiaxvb_5LWlYb_9CX0hLKJgQQ',
+    appId: '1:704841147760:linux:1117d09e2a8fdb76541bb5',
+    messagingSenderId: '704841147760',
+    projectId: 'support-1785d',
+    storageBucket: 'support-1785d.firebasestorage.app',
   );
 }
